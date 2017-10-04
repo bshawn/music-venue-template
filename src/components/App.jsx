@@ -10,11 +10,14 @@ import About from './About';
 
 class App extends Component {
   render() {
+    const childWithProp = React.Children.map(this.props.children, (child) => {
+      return React.cloneElement(child);
+    });
     return (
       <div className="App">
         <Header/>
         <Nav/>
-        <About/>
+        {childWithProp}
         <Social/>
         <Footer/>
       </div>
@@ -24,8 +27,3 @@ class App extends Component {
 
 
 export default App;
-
-// {childWithProp}
-  // const childWithProp = React.Children.map(this.props.children, (child) => {
-  //   return React.cloneElement(child);
-  // });

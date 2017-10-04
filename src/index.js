@@ -18,15 +18,15 @@ import './css/style.css';
 ReactDOM.render(( 
 	<BrowserRouter>
   <App>
-	<Switch>
+	  <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path='events' component={Events}/>
-      <Route path='about' component={About}/>
-      <Route path='programs' component={Programs}/>
-      <Route path='news' component={News}/>
-      <Route path='rental' component={Rental}/>
-      <Route path='contact' component={Contact}/>
-      </Switch>
+      <Route path='/events' component={Events}/>
+      <Route path='/about' component={About}/>
+      <Route path='/programs' component={Programs}/>
+      <Route path='/news' component={News}/>
+      <Route path='/rental' component={Rental}/>
+      <Route path='/contact' component={Contact}/>
+    </Switch>
   </App>
   </BrowserRouter>
 ), document.getElementById('root'));
