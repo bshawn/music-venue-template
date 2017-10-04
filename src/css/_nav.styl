@@ -4,41 +4,71 @@
 	border-radius 5px
 	display flex
 	flex-direction row
+	justify-content space-around
 	position sticky 
 	top 0px
 	width 100%
 	z-index 2
-	.full-nav 
+
+.nav-container
+	align-items center
+	border 1px solid red
+	display flex
+	flex-direction row
+	height 3rem
+	justify-content space-around
+	list-style-type none
+	margin 0
+	padding 0
+	width 90%
+	.nav-link-list
 		align-items center
+		border 1px solid green
 		display flex
-		flex-direction row
-		justify-content center
-		list-style none
-		width 100%
-		padding 0px
-		margin 0 10px
-		overflow hidden
-		@media screen and (max-width: 600px)
-			display none	
+		flex-direction column
+		height 100%
+		// justify-content center
+		list-style-type none
+		padding 0
+		width 17%
 		.nav-link
-			display flex
-			flex-direction column
-			justify-content center
-			align-items center
-			width 15%
-			height 3rem
-			cursor pointer
-			&:hover
-				background red
-				color #222
-				font-weight 900
-				font-size 1.5rem
-			&.active
-				background red
-				color #222
-				font-weight 900
-				font-size 1.5rem
-	.mobile-nav
-		display none
-		@media screen and (max-width: 600px)
-			display flex	
+			border 1px solid red
+			height 100%
+			width 100%
+			.link
+				border 1px solid purple
+				height 100%
+				width 100%
+				display flex
+				justify-content center
+				align-items center
+				&:hover	
+					background red
+					color #222
+					display flex
+					font-weight 900
+					font-size 1.5rem
+					
+
+				&.active
+					background red
+					color #222
+					font-weight 900
+					font-size 1.5rem
+
+
+
+.nav-link-sub
+	display none
+
+
+
+
+
+
+
+
+
+
+
+

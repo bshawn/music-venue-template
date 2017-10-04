@@ -4,7 +4,7 @@ import Nav from './Nav';
 // import Home from './Home';
 import Social from './Social';
 import Footer from './Footer';
-import About from './About';
+// import About from './About';
 
 // import Content from './Content'
 
