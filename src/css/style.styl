@@ -1,3 +1,4 @@
+// json('media-query-bps.json')
 @require './_*.styl'
 
 body
@@ -7,6 +8,7 @@ body
 	margin 0 auto
 	width 85%
 	@media screen and (max-width: 600px)
+	// @media tablet-landscape
 		width 100%
 h2
 	text-align center
@@ -38,6 +40,8 @@ iframe
 	display flex
 	flex-direction column
 	width 100%
+	@media screen and (max-width: 600px)
+		background none
 
 .content-container
 	flex-direction column
