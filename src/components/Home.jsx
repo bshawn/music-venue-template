@@ -7,8 +7,7 @@ class Home extends Component {
 	render() {
     return (
 			<section className="home-container">
-				<section className="slideshow-section">slideshow section
-        </section>
+				<section className="slideshow-section">slideshow section</section>
         <h2>Live Events</h2> 
         <section className="home-content-container">
           <Events/> 
