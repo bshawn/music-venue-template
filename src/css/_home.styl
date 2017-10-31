@@ -3,19 +3,16 @@
 	flex-direction column
 	
 .home-content-container
-	align-items flex-start
-	flex-basis 100%
-	flex-direction row
-	justify-content center
-	text-align center
+	grid-template-columns 3fr 1fr
+	grid-gap 1rem
 
 .sidebar-container
 	filter drop-shadow(0px 0px 15px rgba(200,200,200,0.5))
 	flex-flow column
-	flex 1 0 auto
-	margin 2rem 2rem 0 0 
-	@media screen and (max-width: 600px)
-		display none
+	// flex 1 0 auto
+	// margin 2rem 2rem 0 0 
+	// @media screen and (max-width: 600px)
+	// 	display none
 	.subscribe-container
 		background #333
 		margin-bottom 1rem

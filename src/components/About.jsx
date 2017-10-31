@@ -10,7 +10,7 @@ import stage from '../images/stage.jpg';
 class About extends Component {
     render() {
         return (
-            <Container>
+            <section className="about-page-container">
                 <h3 className="about-header">About Us</h3>                
                 <section className="about-content">
                     <div className="p1-container about-p">
@@ -28,7 +28,8 @@ class About extends Component {
                     </div>  
                         <p className="about-p">As a non-profit organization, our program funding is supported by our live events, special programming, and the amazing support of our donors and sponsors.</p>
                 </section>
-                </Container>
+            </section>
+            
         );
     }
 }
