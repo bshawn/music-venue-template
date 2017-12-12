@@ -1,37 +1,36 @@
 import React, { Component } from 'react';
 
 class AddEventForm extends Component {
-    createEvent(e) {
-        e.preventDefault();
-        // console.log("in");
-        const eventObj = {
-            // id: Date.now(),
-            img: this.img.value,
-            name: this.name.value,
-            title: this.title.value,
-            dateSale: this.dateSale.value,
-            dateShow: this.dateShow.value,
-            timeShow: this.timeShow.value,
-            timeDoors: this.timeDoors.value,
-            priceAdv: this.priceAdv.value,
-            priceDoors: this.priceDoors.value,
-            desc: this.desc.value,
-            linkMain: this.linkMain.value,
-            linkFB: this.linkFB.value,
-            linkSC: this.linkSC.value,
-            video: this.video.value
-        }
-        console.log(event);
-        this.props.addEvent(eventObj);
-        this.addForm.reset();
+processForm(event) {
+    event.preventDefault();
+    console.log("createEvent function called");
+    const eventObj = {
+        img: this.img.value,
+        name: this.name.value,
+        title: this.title.value,
+        dateSale: this.dateSale.value,
+        dateShow: this.dateShow.value,
+        timeShow: this.timeShow.value,
+        timeDoors: this.timeDoors.value,
+        priceAdv: this.priceAdv.value,
+        priceDoors: this.priceDoors.value,
+        desc: this.desc.value,
+        linkMain: this.linkMain.value,
+        linkFB: this.linkFB.value,
+        linkSC: this.linkSC.value,
+        video: this.video.value
     }
+    console.log(eventObj);
+    this.props.add(eventObj);
+    this.form.reset();
+}
     
     render() {
         return (
         <div className="addEventForm-container">
-            <h3 className="add-form-header">Add Event</h3>
+            {/* <h3 className="add-form-header">Add Event</h3> */}
             
-            <form ref={(input) => this.addForm = input} className="event-edit" onSubmit={(e) => this.createEvent(e)}>
+            <form ref={(fullForm) => this.form = fullForm} className="event-edit" onSubmit={this.processForm.bind(this)}>
                 <div className="input-container">
                     <label htmlFor="Featured Image">Featured Image</label>
                     <input ref={(input) => this.img = input} type="text" placeholder="Featured Image.jpg"/>
